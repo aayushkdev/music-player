@@ -82,8 +82,7 @@ scrollbar.pack(side=RIGHT, fill=Y)
 
 mylistbox = Listbox(playlist, yscrollcommand = scrollbar.set)
 
-
-os.chdir(r"C:\Users\Abhay\Music")
+os.chdir(os.path.join(os.path.join(os.environ['USERPROFILE']), 'Music'))
 for line in glob.glob("*.mp3"):
     mylistbox.insert(END, line)
 
